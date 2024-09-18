@@ -1,0 +1,65 @@
+* {
+    font-family: 'Console', sans-serif;
+  }
+  
+  .sidemenuContainer {
+    position:fixed;
+    height: 100vh;;
+    overflow-y: auto;
+    background-color: #FFF7E0;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    transition: width 0.3s ease-in-out;
+    width: 27%;
+
+  }
+  
+  .item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin-left: 20px;
+  }
+  
+  .item p {
+    width: 75%;
+    text-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+  }
+  
+  .btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 13px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 6%;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  
+  .btn:hover {
+    background-color:#317D31;
+  }
+  .imagen
+  {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+
+  
+  
