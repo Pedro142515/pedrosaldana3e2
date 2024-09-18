@@ -1,6 +1,12 @@
 
-<button (click)="toggleMenuVisibility()" class="btn">Reiniciar</button>
-
+<button (click)="toggleMenuVisibility()" class="btn" id = "boton-2">Reiniciar</button>
+<script>
+  function mostrarBoton() 
+  {
+    var botonOculto = document.getElementById("boton-2");
+    botonOculto.style.display = "block";
+  }
+</script>
 <section class="sidemenuContainer"
   [style.background-color]="menuBackgroundColor"
   [style.display]="isMenuVisible ? 'flex' : 'none'"
@@ -9,7 +15,7 @@
   <div class="item">
     <img src="https://cdn-icons-png.flaticon.com/128/2335/2335401.png" alt="" class="imagen">
     <p>{{ userName }}</p>
-    <button (click)="toggleMenuVisibility()" class="btn">Back</button>
+    <button (click)="toggleMenuVisibility()" class="btn" id="boton-1">Back</button>
   </div>
 
   <div class="item">
