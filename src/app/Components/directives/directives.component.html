@@ -1,0 +1,25 @@
+<div class="c1">
+  <div class="container">
+    <h2>Ejercicio 3</h2>
+    <div>
+      <button class="button" title="Filter Tasks" (click)="toggleFilterTasks()">
+        {{ showCompletedTasks ? '✔️ Completadas' : '❌ Completadas' }}
+      </button>
+    </div>
+    <div class="add-task">
+      <input type="text" placeholder="Agregar tarea..." [(ngModel)]="newTaskText" (keydown)="onKeyDown($event)">
+      <button (click)="addTask()">Agregar</button>
+    </div>
+
+    <ul class="task-list">
+      <li class="task" *ngFor="let task of getTasks()">
+        <div class="task-text" [ngClass]="{'completed': task.completed}">{{ task.text }}</div>
+        <div class="task-actions">
+          <button class="button" title="Mark as Completed" (click)="toggleCompleted(task)" *ngIf="!task.completed">✔️</button>
+          <button class="button" title="Delete Task" (click)="deleteTask(task)">🗑️</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
